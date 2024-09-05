@@ -6,4 +6,4 @@
 
 # 更新日志
 
-详见
+详见[UPDATE.md](https://github.com/icefire-ken/pc_info_collection/blob/main/UPDATE.md)。
