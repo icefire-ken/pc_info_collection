@@ -21,7 +21,9 @@
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app.png" width="300">
 
 为你的应用自定义名称，并点击创建，就可以看到新建的应用了。
-![create_app.png_2](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app_2.png)
+
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app_2.png" width="500">
+
 ![app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png)
 
 ## 3、查看应用信息
