@@ -103,9 +103,9 @@
 
 - 其中没有预配置任何参数，每次运行都需要手动输入参数设置，有需要时可以随时修改相关配置参数。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/basic_config.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/basic_config.png" width="700">
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/url_config.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/url_config.png" width="700">
 
 # 更新日志
 
