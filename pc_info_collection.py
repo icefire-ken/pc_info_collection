@@ -28,7 +28,7 @@ def get_public_ip(gui):
         public_ip = response.text  # 提取返回的公网IP地址
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取公网IP地址时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '公网 IP 地址' + ' ' + '=' * 10 + '\n')
@@ -42,7 +42,7 @@ def get_network_info(gui):
         network_info = subprocess.run('ipconfig /all', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取网络配置信息时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '网络信息' + ' ' + '=' * 10 + '\n')
@@ -60,10 +60,9 @@ def test_internal_url_connection(gui, url_internal):
             test_internal_url_result = f'内网：{real_internal_url} 访问成功！'
         else:
             test_internal_url_result = f'内网：{real_internal_url} 访问失败！'
-            # 注意，有些URL即便能打开，返回码未必是200
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'测试内部URL访问时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示测试内部URL的结果
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '测试内、外网URL访问' + ' ' + '=' * 10 + '\n')
@@ -81,10 +80,9 @@ def test_external_url_connection(gui, url_external):
             test_external_url_result = f'外网：{real_external_url} 访问成功！'
         else:
             test_external_url_result = f'外网：{real_external_url} 访问失败！'
-            # 注意，有些URL即便能打开，返回码未必是200
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'测试外部URL访问时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示测试外部URL的结果
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '测试外网URL访问' + ' ' + '=' * 10 + '\n')
@@ -98,7 +96,7 @@ def get_open_port(gui):
         open_port = subprocess.run('netstat -ano', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取开放的端口时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '开放的端口' + ' ' + '=' * 10 + '\n')
@@ -112,7 +110,7 @@ def get_routing_table(gui):
         routing_table = subprocess.run('route print', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取路由表信息时，发生错误：{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '路由表' + ' ' + '=' * 10 + '\n')
