@@ -4,6 +4,7 @@
 # 导入模块
 import PySimpleGUI as sg
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import subprocess
 import json
 import lark_oapi as lark
@@ -28,7 +29,7 @@ def get_public_ip(gui):
         public_ip = response.text  # 提取返回的公网IP地址
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'获取公网IP地址时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取公网IP地址时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '公网 IP 地址' + ' ' + '=' * 10 + '\n')
@@ -42,7 +43,7 @@ def get_network_info(gui):
         network_info = subprocess.run('ipconfig /all', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'获取网络配置信息时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取网络配置信息时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '网络信息' + ' ' + '=' * 10 + '\n')
@@ -54,7 +55,10 @@ def get_network_info(gui):
 def test_internal_url_connection(gui, url_internal):
     real_internal_url = 'https://' + url_internal  # 拼接requests所需的完整URL
     try:  # 访问内部URL
-        response_internal = requests.get(real_internal_url, timeout=5)
+        # 忽略不安全的请求警告
+        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+        response_internal = requests.get(real_internal_url, timeout=5, verify=False)
 
         if response_internal.status_code == 200:  # 判断HTTP返回码，200即访问成功
             test_internal_url_result = f'内网：{real_internal_url} 访问成功！'
@@ -62,7 +66,7 @@ def test_internal_url_connection(gui, url_internal):
             test_internal_url_result = f'内网：{real_internal_url} 访问失败！'
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'测试内部URL访问时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'测试内部URL访问时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示测试内部URL的结果
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '测试内、外网URL访问' + ' ' + '=' * 10 + '\n')
@@ -82,7 +86,7 @@ def test_external_url_connection(gui, url_external):
             test_external_url_result = f'外网：{real_external_url} 访问失败！'
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'测试外部URL访问时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'测试外部URL访问时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示测试外部URL的结果
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '测试外网URL访问' + ' ' + '=' * 10 + '\n')
@@ -96,7 +100,7 @@ def get_open_port(gui):
         open_port = subprocess.run('netstat -ano', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'获取开放的端口时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取开放的端口时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '开放的端口' + ' ' + '=' * 10 + '\n')
@@ -110,7 +114,7 @@ def get_routing_table(gui):
         routing_table = subprocess.run('route print', capture_output=True, text=True, check=True)
 
     except Exception as e:  # 捕获异常，并弹出提示
-        sg.popup(f'获取路由表信息时，发生错误：{e}', title='错误提示', keep_on_top=True)
+        sg.popup(f'获取路由表信息时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
     else:  # 没有异常，则在GUI上显示获取到的信息
         gui['-DISPLAY-'].print('=' * 10 + ' ' + '路由表' + ' ' + '=' * 10 + '\n')
@@ -271,11 +275,11 @@ def create_window():
 
         # 设置内部URL地址
         elif event == '内部URL地址':
-            INTERNAL_URL = sg.popup_get_text('请输入要测试的内部URL地址：', title='设置内部URL地址', keep_on_top=True, default_text='www.163.com')
+            INTERNAL_URL = sg.popup_get_text('请输入要测试的内部URL地址：', title='设置内部URL地址', keep_on_top=True, default_text=INTERNAL_URL)
 
         # 设置外部URL地址
         elif event == '外部URL地址':
-            EXTERNAL_URL = sg.popup_get_text('请输入要测试的外部URL地址：', title='设置外部URL地址', keep_on_top=True, default_text='www.baidu.com')
+            EXTERNAL_URL = sg.popup_get_text('请输入要测试的外部URL地址：', title='设置外部URL地址', keep_on_top=True, default_text=EXTERNAL_URL)
 
     window.close()
 
