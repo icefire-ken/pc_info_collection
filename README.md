@@ -4,6 +4,7 @@
 - 使用本脚本程序，可以方便、快捷的实现采集员工PC网络信息的工作。
 - 并通过飞书机器人，将采集结果发送给指定网络运维人员。
 
+
 # 创建飞书机器人
 
 此脚本程序需要调用飞书机器人，需要先在飞书官网创建一个机器人。
@@ -49,6 +50,7 @@
 最后创建版本，发布应用，等待审核通过即可使用飞书机器人。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_release.png" width="700">
+
 
 # 使用方法
 
