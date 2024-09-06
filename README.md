@@ -75,15 +75,19 @@
 
 ### 1.1 移植环境
 
-通过`requirements.txt`文件，将脚本移植到本地环境，推荐是虚拟环境。
+利用`requirements.txt`文件，将脚本移植到本地环境，推荐是虚拟环境。
 
 使用`pip install -r requirements.txt`下载脚本所需要的模块。
 
 ### 1.2 配置全局变量
 
-在脚本的全局变量部分中，配置飞书机器人App ID和App Secret、接收者User ID，测试内部、外部URL地址。
+- 在脚本的设置全局变量部分中，配置飞书机器人App ID和App Secret、接收者User ID，测试内部、外部URL地址。
 
-这里需要填写的接收者User ID，需要到飞书后台查看，通过API调试台测试获取。
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/global_variables.png">
+
+- 这里需要填写的接收者User ID，需要到飞书后台查看，通过API调试台测试获取。
+
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/get_user_id.png">
 
 ### 1.3 测试脚本
 
