@@ -11,6 +11,7 @@
 ## 1、登录飞书开放平台，进入开发者后台
 
 访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
+![login_open_feishu.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu.png)
 
 ## 2、创建企业自建应用
 
