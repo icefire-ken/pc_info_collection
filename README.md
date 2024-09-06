@@ -24,7 +24,7 @@
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app_2.png" width="500">
 
-![app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png)
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png" width="500">
 
 ## 3、查看应用信息
 
