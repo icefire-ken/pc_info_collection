@@ -95,7 +95,7 @@
 
 ### 1.4 打包成.exe程序
 
-安装pyinstaller，使用`pyinstaller -F pc_info_collection.py`打包成.exe程序。
+安装pyinstaller，使用`pyinstaller -F -w pc_info_collection.py`打包成.exe程序。
 
 ## 二、提供给网络运维人员使用
 
