@@ -35,7 +35,9 @@
 ## 4、开通API权限
 
 需要为应用开通API权限，才能调用飞书机器人的API。
+
 权限包括：
+
 获取用户受雇信息、获取用户User ID、通过手机号或邮箱获取用户ID、获取与更新群组信息、获取群组信息、获取与发送单聊、群组消息、接收群聊中@机器人消息事件、以应用的身份发消息、获取与上传图片或文件资源。
 
 ![app_authority_1.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_1.png)
