@@ -21,7 +21,7 @@
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app.png" width="300">
 
-- 为你的应用自定义名称，并点击创建，就可以看到新建的应用了。
+- 为应用自定义名称，并点击创建，就可以看到新建的应用了。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png" width="500">
 
@@ -99,10 +99,13 @@
 
 ## 二、提供给网络运维人员使用
 
-网络运维人员在脚本程序使用上可能需要更灵活一些，因此直接使用项目上Release的.exe程序即可。
+- 网络运维人员在脚本程序使用上可能需要更灵活一些，因此直接使用项目上Release的.exe程序即可。
 
-其中没有预配置任何参数，每次运行都需要手动输入参数设置，有需要时可以随时修改相关配置参数。
+- 其中没有预配置任何参数，每次运行都需要手动输入参数设置，有需要时可以随时修改相关配置参数。
 
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/basic_config.png">
+
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/url_config.png">
 
 # 更新日志
 
