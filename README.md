@@ -6,12 +6,13 @@
 
 # 创建飞书机器人
 
-因为此脚本程序需要调用飞书机器人，所以需要先在飞书官网创建一个机器人。
+此脚本程序需要调用飞书机器人，需要先在飞书官网创建一个机器人。
 
 ## 1、登录飞书开放平台，进入开发者后台
 
 访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
 ![login_open_feishu.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu.png)
+![login_open_feishu_app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu_app.png)
 
 ## 2、创建企业自建应用
 
