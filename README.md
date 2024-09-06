@@ -11,7 +11,7 @@
 
 ## 1、登录飞书开放平台，进入开发者后台
 
-访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
+- 访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu_app.png">
 
@@ -27,19 +27,19 @@
 
 - 为应用添加机器人能力。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/add_robot.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/add_robot.png" width="500">
 
 ## 3、查看应用信息
 
-点击应用名称，进入应用详情页面，可以看到应用信息。
+- 点击应用名称，进入应用详情页面，可以看到应用信息。
 
-这里的App ID和App Secret是非常重要的两个信息，后面需要用到。
+- 这里的App ID和App Secret是非常重要的两个信息，后面需要用到。
 
 ![app_id_app_secret.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_id_app_secret.png)
 
 ## 4、开通API权限
 
-需要为应用开通API权限，才能调用飞书机器人的API。
+- 需要为应用开通API权限，才能调用飞书机器人的API。
 
 **权限包括：**
 - 获取用户受雇信息
@@ -60,7 +60,7 @@
 
 ## 5、发布应用
 
-最后创建版本，发布应用，等待审核通过即可使用飞书机器人。
+- 最后创建版本，发布应用，等待审核通过即可使用飞书机器人。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_release.png" width="700">
 
