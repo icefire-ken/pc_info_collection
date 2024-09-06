@@ -74,6 +74,7 @@
 ### 1.1 移植环境
 
 通过`requirements.txt`文件，将脚本移植到本地环境，推荐是虚拟环境。
+
 使用`pip install -r requirements.txt`下载脚本所需要的模块。
 
 ### 1.2 配置全局变量
