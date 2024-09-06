@@ -17,19 +17,23 @@
 
 ## 2、创建企业自建应用
 
-点击创建企业自建应用。
+- 点击创建企业自建应用。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app.png" width="300">
 
-为你的应用自定义名称，并点击创建，就可以看到新建的应用了。
+- 为你的应用自定义名称，并点击创建，就可以看到新建的应用了。
 
 <img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png" width="500">
+
+- 为应用添加机器人能力。
+
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/add_robot.png">
 
 ## 3、查看应用信息
 
 点击应用名称，进入应用详情页面，可以看到应用信息。
 
-这里的App ID和App Secret，是非常重要的两个信息，后面需要用到。
+这里的App ID和App Secret是非常重要的两个信息，后面需要用到。
 
 ![app_id_app_secret.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_id_app_secret.png)
 
