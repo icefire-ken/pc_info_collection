@@ -48,7 +48,7 @@
 
 最后创建版本，发布应用，等待审核通过即可使用飞书机器人。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_release.png" width="500">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_release.png" width="700">
 
 # 使用方法
 
