@@ -17,7 +17,9 @@
 ## 2、创建企业自建应用
 
 点击创建企业自建应用。
+
 ![create_app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app.png)
+
 为你的应用自定义名称，并点击创建，就可以看到新建的应用了。
 ![create_app.png_2](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app_2.png)
 ![app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png)
