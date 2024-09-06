@@ -12,8 +12,8 @@
 ## 1、登录飞书开放平台，进入开发者后台
 
 访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
+
 ![login_open_feishu.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu.png)
-![login_open_feishu_app.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu_app.png)
 
 ## 2、创建企业自建应用
 
@@ -30,7 +30,9 @@
 ## 3、查看应用信息
 
 点击应用名称，进入应用详情页面，可以看到应用信息。
+
 这里的App ID和App Secret，是非常重要的两个信息，后面需要用到。
+
 ![app_id_app_secret.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_id_app_secret.png)
 
 ## 4、开通API权限
@@ -42,7 +44,9 @@
 获取用户受雇信息、获取用户User ID、通过手机号或邮箱获取用户ID、获取与更新群组信息、获取群组信息、获取与发送单聊、群组消息、接收群聊中@机器人消息事件、以应用的身份发消息、获取与上传图片或文件资源。
 
 ![app_authority_1.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_1.png)
+
 ![app_authority_2.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_2.png)
+
 ![app_authority_3.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_3.png)
 
 ## 5、发布应用
@@ -57,6 +61,7 @@
 ## 一、提供给普通员工使用
 
 普通员工启动.exe程序后，直接点击相应功能即可，不需要额外设置配置信息，简化使用成本。
+
 这就要求网络运维人员提前配置好脚本程序中使用到的全局变量，然后再打包成.exe程序。
 
 ### 1.1 移植环境
@@ -67,6 +72,7 @@
 ### 1.2 配置全局变量
 
 在脚本的全局变量部分中，配置飞书机器人App ID和App Secret、接收者User ID，测试内部、外部URL地址。
+
 这里需要填写的接收者User ID，需要到飞书后台查看，通过API调试台测试获取。
 
 ### 1.3 测试脚本
@@ -80,6 +86,7 @@
 ## 二、提供给网络运维人员使用
 
 网络运维人员，在脚本程序使用上可能需要更灵活一些，因此直接使用项目上Release的.exe程序即可。
+
 当中没有预配置任何参数，每次运行都需要手动配置，有需要时可以随时修改相关配置参数。
 
 
