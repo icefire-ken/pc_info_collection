@@ -10,6 +10,7 @@ import json
 import lark_oapi as lark
 from lark_oapi.api.im.v1 import *
 from lark_oapi.api.contact.v3 import *
+from lark_oapi.core.exception import *
 
 # 全局变量
 # 这里配置好各个变量方便将程序提供给普通用户使用，普通用户不再需要填写这些配置，点击使用功能即可。
@@ -156,34 +157,41 @@ def get_user_info(app_id, app_secret, receiver_mobile):
 
 # 飞书发送信息
 def feishu_send(app_id, app_secret, receive_id, content):
-    # 创建client，指定飞书机器人的app_id和app_secret
-    client = lark.Client.builder() \
-        .app_id(app_id) \
-        .app_secret(app_secret) \
-        .log_level(lark.LogLevel.DEBUG) \
-        .build()
+    try:  # 尝试发起请求
+        # 创建client，指定飞书机器人的app_id和app_secret
+        client = lark.Client.builder() \
+            .app_id(app_id) \
+            .app_secret(app_secret) \
+            .log_level(lark.LogLevel.DEBUG) \
+            .build()
 
-    # 构造请求对象，指定接收者的user id、消息类型、消息内容
-    request: CreateMessageRequest = CreateMessageRequest.builder() \
-        .receive_id_type("open_id") \
-        .request_body(CreateMessageRequestBody.builder()
-                      .receive_id(receive_id)
-                      .msg_type("text")
-                      .content(json.dumps({"text": content}))
-                      .build()) \
-        .build()
+        # 构造请求对象，指定接收者的user id、消息类型、消息内容
+        request: CreateMessageRequest = CreateMessageRequest.builder() \
+            .receive_id_type("open_id") \
+            .request_body(CreateMessageRequestBody.builder()
+                          .receive_id(receive_id)
+                          .msg_type("text")
+                          .content(json.dumps({"text": content}))
+                          .build()) \
+            .build()
 
-    # 发起请求
-    response: CreateMessageResponse = client.im.v1.message.create(request)
+        # 发起请求
+        response: CreateMessageResponse = client.im.v1.message.create(request)
 
-    # 处理失败返回
-    if not response.success():
-        lark.logger.error(
-            f"client.im.v1.message.create failed, code: {response.code}, msg: {response.msg}, log_id: {response.get_log_id()}")
-        return
+    except NoAuthorizationException as e:  # 如果没有配置app id或app secret，弹出提示
+        sg.popup(f'飞书发送信息时，发生错误：\n{e}', title='错误提示', keep_on_top=True)
 
-    # 处理业务结果
-    lark.logger.info(lark.JSON.marshal(response.data, indent=4))
+    else:
+        # 处理失败返回
+        if not response.success():
+            lark.logger.error(
+                f"client.im.v1.message.create failed, code: {response.code}, msg: {response.msg}, log_id: {response.get_log_id()}")
+            if response.code == 230001:  # 如果没有配置接收者手机号码，弹出提示
+                sg.popup(f'飞书发送信息时，发生错误：\n未配置接收者手机号码', title='错误提示', keep_on_top=True)
+            return
+
+        # 处理业务结果
+        lark.logger.info(lark.JSON.marshal(response.data, indent=4))
 
 
 # 构建窗体
