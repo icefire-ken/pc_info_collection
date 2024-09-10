@@ -13,21 +13,21 @@
 
 - 访问[飞书开放平台](https://open.feishu.cn/)，登录后，进入开发者后台。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/login_open_feishu_app.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/login_open_feishu_app.png">
 
 ## 2、创建企业自建应用
 
 - 点击创建企业自建应用。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/create_app.png" width="300">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/create_app.png" width="300">
 
 - 为应用自定义名称，并点击创建，就可以看到新建的应用了。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app.png" width="500">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/app.png" width="500">
 
 - 为应用添加机器人能力。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/add_robot.png" width="500">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/add_robot.png" width="500">
 
 ## 3、查看应用信息
 
@@ -35,7 +35,7 @@
 
 - 这里的App ID和App Secret是非常重要的两个信息，后面需要用到。
 
-![app_id_app_secret.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_id_app_secret.png)
+![app_id_app_secret.png](https://github.com/icefire-ken/pc_info_collection/blob/main/images/app_id_app_secret.png)
 
 ## 4、开通API权限
 
@@ -52,17 +52,17 @@
 - 以应用的身份发消息
 - 获取与上传图片或文件资源。
 
-![app_authority_1.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_1.png)
+![app_authority_1.png](https://github.com/icefire-ken/pc_info_collection/blob/main/images/app_authority_1.png)
 
-![app_authority_2.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_2.png)
+![app_authority_2.png](https://github.com/icefire-ken/pc_info_collection/blob/main/images/app_authority_2.png)
 
-![app_authority_3.png](https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_authority_3.png)
+![app_authority_3.png](https://github.com/icefire-ken/pc_info_collection/blob/main/images/app_authority_3.png)
 
 ## 5、发布应用
 
 - 最后创建版本，发布应用，等待审核通过即可使用飞书机器人。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/app_release.png" width="700">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/app_release.png" width="700">
 
 
 # 使用方法
@@ -83,11 +83,11 @@
 
 - 在脚本的设置全局变量部分中，配置飞书机器人App ID和App Secret、接收者User ID，测试内部、外部URL地址。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/global_variables.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/global_variables.png">
 
 - 这里需要填写的接收者User ID，需要到飞书后台查看，通过API调试台测试获取。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/get_user_id.png">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/get_user_id.png">
 
 ### 1.3 测试脚本
 
@@ -103,9 +103,9 @@
 
 - 其中没有预配置任何参数，每次运行都需要手动输入参数设置，有需要时可以随时修改相关配置参数。
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/basic_config.png" width="700">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/basic_config.png" width="700">
 
-<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/Images/url_config.png" width="700">
+<img src="https://github.com/icefire-ken/pc_info_collection/blob/main/images/url_config.png" width="700">
 
 # 更新日志
 
